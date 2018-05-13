@@ -101,6 +101,28 @@ unittestresults.out: dominion.c unittest1.c unittest2.c unittest3.c unittest4.c 
 	cardtest4 >> unittestresults.out
 	gcov dominion.c -b >> unittestresults.out
 
+randomtestadventure: randomtestadventure.c dominion.o rngs.o
+	make dominion.o
+	make rngs.o
+	gcc -o randomtestadventure -g randomtestadventure.c dominion.o rngs.o $(CFLAGS)
+	randomtestadventure > randomtestadventure.out
+	gcov dominion.c -b >> randomtestadventure.out
+
+randomtestcard1: randomtestcard1.c dominion.o rngs.o
+	make dominion.o
+	make rngs.o
+	gcc -o randomtestcard1 -g randomtestcard1.c dominion.o rngs.o $(CFLAGS)
+	randomtestcard1 > randomtestcard1.out
+	gcov dominion.c -b >> randomtestcard1.out
+
+randomtestcard2: randomtestcard2.c dominion.o rngs.o
+	make dominion.o
+	make rngs.o
+	gcc -o randomtestcard2 -g randomtestcard2.c dominion.o rngs.o $(CFLAGS)
+	randomtestcard2 > randomtestcard2.out
+	gcov dominion.c -b >> randomtestcard2.out
+
+
 
 player: player.c interface.o
 	gcc -o player player.c -g  dominion.o rngs.o interface.o $(CFLAGS)

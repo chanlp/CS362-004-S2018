@@ -770,7 +770,7 @@ int adventurerCard(int card, struct gameState * state){
 
 
 int smithyCard(int card, struct gameState * state, int handPos){
-	printf("This is the refactored Smithy card function!");
+	//printf("This is the refactored Smithy card function!");
 
 	int i;
   	int currentPlayer = whoseTurn(state);
