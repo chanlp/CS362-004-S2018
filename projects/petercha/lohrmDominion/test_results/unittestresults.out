@@ -1,0 +1,174 @@
+Result for running all unit and card tests
+unittest1.c:
+TESTING isGameOver():
+Setting stack of province cards to 0
+TEST PASSED. Province card stack empty and game is over.
+TEST PASSED due to three supply pile empty.
+File 'dominion.c'
+Lines executed:16.52% of 557
+Branches executed:16.39% of 415
+Taken at least once:13.25% of 415
+Calls executed:7.45% of 94
+Creating 'dominion.c.gcov'
+
+unittest2.c:
+TESTING updateCoins
+
+Testing each type of coin: copper, silver, and gold:
+TEST 1: Copper coin adds +1 to total coins
+PASSED. Coins expected: 1, Actual coins: 1
+TEST 2: Silver coin adds +2 to total coins
+PASSED. Coins expected: 2, Actual coins: 2
+TEST 3: Gold coin adds +3 to total coins
+PASSED. Coins expected: 3, Actual coins: 3
+TEST 4: Testing bonus, which shoudld give coinVal +1
+PASSED. Coins expected: 4, Actual coins: 4
+File 'dominion.c'
+Lines executed:16.88% of 557
+Branches executed:16.39% of 415
+Taken at least once:13.73% of 415
+Calls executed:7.45% of 94
+Creating 'dominion.c.gcov'
+
+unittest2.c:
+TESTING updateCoins
+
+Testing each type of coin: copper, silver, and gold:
+TEST 1: Copper coin adds +1 to total coins
+PASSED. Coins expected: 1, Actual coins: 1
+TEST 2: Silver coin adds +2 to total coins
+PASSED. Coins expected: 2, Actual coins: 2
+TEST 3: Gold coin adds +3 to total coins
+PASSED. Coins expected: 3, Actual coins: 3
+TEST 4: Testing bonus, which shoudld give coinVal +1
+PASSED. Coins expected: 4, Actual coins: 4
+File 'dominion.c'
+Lines executed:16.88% of 557
+Branches executed:16.39% of 415
+Taken at least once:13.73% of 415
+Calls executed:7.45% of 94
+Creating 'dominion.c.gcov'
+
+unittest3.c:
+---------- TESTING FUNCTION: discardCard ----------
+
+TEST 1: If card not trashed, add to player pile
+PASSED. Expected 1, Received 1
+TEST 2: Ensure the card is no longer in the player hand
+FAILED. Card is still in player hand...
+TEST 3: If all cards are used, set the last card
+PASSED. Expected -1, Received -1
+File 'dominion.c'
+Lines executed:18.85% of 557
+Branches executed:17.83% of 415
+Taken at least once:14.46% of 415
+Calls executed:7.45% of 94
+Creating 'dominion.c.gcov'
+
+unittest4.c:
+---------- TESTING FUNCTION: whoseTurn ------------
+
+TEST 1: Checking to see if function correctly returns the correct turn
+
+Manually setting the turn for the game state...
+TEST PASSED: Function correctly returns turn.
+File 'dominion.c'
+Lines executed:19.21% of 557
+Branches executed:17.83% of 415
+Taken at least once:14.46% of 415
+Calls executed:7.45% of 94
+Creating 'dominion.c.gcov'
+
+cardtest1.c:
+---------------- Testing Card: Smithy --------------------
+Test 1: Current player should receive exact 3 cardshand count = 7, expected = 7
+TEST PASSED: Player recieved exactly 3 cards
+deck count = 2, expected = 2
+TEST FAILED: 3 cards did not come from own pile
+
+Test3: Player 2's deck size unchanged when smithy card is drawn:
+PASSED. Deck size start: 10, Deck size finish: 10
+
+Test3.1: Player 2's hand size unchanged when smithy card is drawn:
+PASSED. Hand size start: 0, Hand size finish: 0
+
+Test 4: Test for state changes to see if any changes have been made to the victory card piles: 
+PASSED: No state changes to Victory cards.
+Test 4.1: Test for state changes to see if any changes have been made to the kingdom card piles: 
+PASSED: No state changes to Kingdom cards.
+ ---------- SUCCESS: Testing Complete for Smithy card ---------
+
+File 'dominion.c'
+Lines executed:21.72% of 557
+Branches executed:23.86% of 415
+Taken at least once:15.66% of 415
+Calls executed:11.70% of 94
+Creating 'dominion.c.gcov'
+
+cardtest2.c:
+------- TESTING CARD: Adventurer ---------
+
+TEST 1: Testing drawing cards until you get 2 coin cards
+PASSED. Coin card amount expected: 2, count finish: 2
+
+TEST 2: Ensure that non-coin cards were discarded
+FAILED. Expected discard amount: 1, Result discarded: 0
+
+TEST 3: Test for state changes. Make sure victory card counts remain the same
+PASSED. No state change. Victory card count are the same.
+File 'dominion.c'
+Lines executed:23.52% of 557
+Branches executed:25.78% of 415
+Taken at least once:17.35% of 415
+Calls executed:13.83% of 94
+Creating 'dominion.c.gcov'
+
+cardtest2.c:
+------- TESTING CARD: Adventurer ---------
+
+TEST 1: Testing drawing cards until you get 2 coin cards
+PASSED. Coin card amount expected: 2, count finish: 2
+
+TEST 2: Ensure that non-coin cards were discarded
+FAILED. Expected discard amount: 1, Result discarded: 0
+
+TEST 3: Test for state changes. Make sure victory card counts remain the same
+PASSED. No state change. Victory card count are the same.
+File 'dominion.c'
+Lines executed:23.52% of 557
+Branches executed:25.78% of 415
+Taken at least once:17.35% of 415
+Calls executed:13.83% of 94
+Creating 'dominion.c.gcov'
+
+cardtest3.c:
+---------- TESTING CARD: Village ------------
+
+TEST 1: Make sure player gains +1 card:
+PASSED. Players lost village card and drew a card. Card count is the same.
+Test 2: Ensure that player gains 2 actions
+PASSED. Expected Action Card count: 2, Actual count: 1
+TEST 3: Make sure played village card is discarded from hand
+PASSED. Expected number of cards put onto pile: 1, Actural number: 1
+File 'dominion.c'
+Lines executed:24.60% of 557
+Branches executed:25.78% of 415
+Taken at least once:17.59% of 415
+Calls executed:17.02% of 94
+Creating 'dominion.c.gcov'
+
+cardtest4.c:
+---------- TESTING CARD: Remodel---------------------
+
+
+TEST 1: remodel card is discarded to played pile after used.
+FAILED. Expected addition to played pile: 1, Actual addition: 0
+TEST 1: remodel card is discarded to played pile after used and a card is trashed.
+FAILED. Expected discard: 2, Actual discard: 0
+File 'dominion.c'
+Lines executed:25.85% of 557
+Branches executed:33.01% of 415
+Taken at least once:18.55% of 415
+Calls executed:19.15% of 94
+Creating 'dominion.c.gcov'
+
